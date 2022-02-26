@@ -3,6 +3,7 @@ const chalk = require("chalk")
 
 const createAccount = require("./src/createAccount")
 const deposit = require("./src/deposit")
+const exit = require("./src/exit")
 
 operation()
 
@@ -33,8 +34,7 @@ function operation() {
         } else if (action == "Sacar") {
 
         } else if (action == "Sair") {
-            console.log(chalk.bgBlue.black("Obrigado por usar o Accounts!"))
-            process.exit
+           exit()
         }
     })
         .catch((err) => console.log(err))
