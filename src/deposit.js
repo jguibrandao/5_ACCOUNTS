@@ -38,8 +38,6 @@ function deposit() {
 }
 
 function addAmount(accountName, amount) {
-    const operation = require("../index")
-    
     const accountData = getAccount(accountName)
 
     if(!amount || amount <= 0) {
@@ -60,7 +58,6 @@ function addAmount(accountName, amount) {
         chalk.green(`Foi depositado o valor de R$${amount} na conta do usuário ${accountName}`)
     )
 
-    operation()
 }
 
 module.exports = deposit
