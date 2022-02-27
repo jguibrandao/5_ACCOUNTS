@@ -4,6 +4,8 @@ const chalk = require("chalk")
 const createAccount = require("./src/createAccount")
 const deposit = require("./src/deposit")
 const exit = require("./src/exit")
+const checkBalance = require("./src/checkBalance")
+const withdraw = require("./src/withdraw")
 
 operation()
 
@@ -28,11 +30,11 @@ function operation() {
         if (action == "Criar Conta") {
             createAccount()
         } else if (action == "Consultar Saldo") {
-
+            checkBalance()
         } else if (action == "Depositar") {
             deposit()
         } else if (action == "Sacar") {
-
+            withdraw()
         } else if (action == "Sair") {
            exit()
         }
